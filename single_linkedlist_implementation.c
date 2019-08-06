@@ -165,6 +165,5 @@ void delete(){
 				free(q);	
 			}
 		}
-				
 	}
 }
