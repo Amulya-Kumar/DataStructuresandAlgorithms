@@ -4,7 +4,7 @@
 struct node {
 	int data;
 	struct node* link;
-}
+};
 
 struct node* root = NULL;
 int len;
@@ -65,11 +65,47 @@ void append() {
 		p=root;
 		
 		while(p->link != NULL){
-			p = p->link			
+			p = p->link;			
 		}
 		p->link = temp;	
 	}
 }
+
+void addatbegin(){
+	struct node* temp;
+	temp = (struct node*)malloc(sizeof(struct node));
+	printf("Enter node data: ");
+	scanf("%d", &temp->data);
+	
+	temp->link = root;
+	root = temp;
+}
+
+void addatafter(){
+	struct node* temp;
+	struct node* p;
+	p = root;
+	int loc, len, i=1;
+	temp = (struct node*)malloc(sizeof(struct node));
+	printf("Enter node data: ");
+	scanf("%d", &temp->data);
+
+	printf("Enter adding location: ");
+	scanf("%d", &loc);
+	len = length();
+	if(loc > len || loc < 1){
+		printf("Invalid input");
+		printf("Location is out of bounds");
+	}
+	else{
+		while(i<loc){
+			i++;
+			p = p->link;		
+		}
+		temp->link = p->link;
+		p->link = temp;	
+	}
+}	
 
 int length(){
 	int count = 0;
@@ -94,5 +130,41 @@ void display(){
 			temp = temp->link; 	
 		}	
 		printf("\n\n");
+	}
+}
+
+void delete(){
+	struct node* p;
+	struct node* q;
+	int loc, len, i=1;
+	p = root;
+	if(p == NULL){
+		printf("List is empty. There is nothing to delete\n");	
+	}
+	else{
+		printf("Enter the location of the node to delete: \n");
+		scanf("%d", &loc);
+		len = length();
+		if(loc > len || len < 1){
+			printf("Invalid location to delete.\n");
+		}
+		else{
+			if(loc == 1){
+				root = p->link;
+				p->link = NULL;
+				free(p);
+			}
+			else{
+				while(i<loc-1){
+					p = p->link;
+					i++;			
+				}
+				q = p->link;
+				p->link = q->link;			
+				q->link = NULL;
+				free(q);	
+			}
+		}
+				
 	}
 }
