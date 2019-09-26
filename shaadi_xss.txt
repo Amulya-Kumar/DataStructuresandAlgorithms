@@ -1,3 +1,22 @@
+HTTP/1.1 301 
+Cache-Control: private
+Content-Length: 213
+Content-Type: text/html; charset=utf-8
+Location: https://www.bing.com:443/api/v1/public_signup?toWww=1&redig=B940351752944B2A86CCF73F14D20E1A
+Vary: Accept-Encoding
+X-MSEdge-Ref: Ref A: 2AAE878038D5478D847E96653C6D721E Ref B: BL2EDGE0907 Ref C: 2019-09-26T09:22:35Z
+Set-Cookie: _EDGE_S=F=1&SID=36FF3422ED336962018139C1EC68681A; path=/; httponly; domain=bing.com
+Set-Cookie: _EDGE_V=1; path=/; httponly; expires=Tue, 20-Oct-2020 09:22:35 GMT; domain=bing.com
+Set-Cookie: MUID=2F21771E38206A3E28D07AFD397B6B14; path=/; expires=Tue, 20-Oct-2020 09:22:35 GMT; domain=bing.com
+Set-Cookie: MUIDB=2F21771E38206A3E28D07AFD397B6B14; path=/; httponly; expires=Tue, 20-Oct-2020 09:22:35 GMT
+Date: Thu, 26 Sep 2019 09:22:35 GMT
+Connection: close
+
+<html><head><title>Object moved</title></head><body>
+<h2>Object moved to <a href="https://www.bing.com:443/api/v1/public_signup?toWww=1&amp;redig=B940351752944B2A86CCF73F14D20E1A">here</a>.</h2>
+</body></html>
+
+
 HTTP/1.1 200 OK
 Date: Thu, 26 Sep 2019 00:11:50 GMT
 Content-Type: text/html; charset=UTF-8
